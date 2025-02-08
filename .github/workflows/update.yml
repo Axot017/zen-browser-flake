@@ -38,7 +38,7 @@ jobs:
         run: |
           baseUrl="https://github.com/zen-browser/desktop/releases/download/$ZEN_VERSION"
 
-          url="$baseUrl/zen.linux-x86_64.tar.bz2"
+          url="$baseUrl/zen.linux-x86_64.tar.xz"
           sha=$(nix-prefetch-url --type sha256 --unpack $url)
 
           sed -i "s/version = \".*\"/version = \"$ZEN_VERSION\"/" ./flake.nix
